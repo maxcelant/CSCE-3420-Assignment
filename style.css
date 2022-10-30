@@ -1,0 +1,568 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&family=Inter:wght@200&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&family=Raleway:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&family=Open+Sans:wght@300&family=Raleway:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&family=Open+Sans:wght@300&family=Raleway:wght@300&family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,600&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+
+.logo_head {grid-area: logoHead;}
+.main_nav {grid-area: mainNav;}
+.deals_nav {grid-area: dealNav;}
+.shoes_nav {grid-area: shoesNav;}
+.filter_bar {grid-area: filterBar;}
+.content_area {grid-area: contentArea;}
+.footer_area {grid-area: footerArea;}
+
+.web_body {
+    margin: 20px 0px 0px 0px;
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: 15% 21.25% 21.25% 21.25% 21.25%;
+    grid-template-areas: 
+    'logoHead logoHead logoHead logoHead logoHead'
+    'mainNav mainNav mainNav mainNav mainNav'
+    'dealNav dealNav dealNav dealNav dealNav'
+    'shoesNav shoesNav shoesNav shoesNav shoesNav'
+    'filterBar contentArea contentArea contentArea contentArea'
+    'footerArea footerArea footerArea footerArea footerArea';
+}
+
+/*========= Header ===========*/
+/*
+.logo_head, .main_nav, .deals_nav, .filter_bar, .content_area, .footer_area {
+    /*border: 1px solid rgba(0, 0, 0, 0.253); 
+}
+*/
+
+.logo_head {
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(101, 141, 192);
+}
+
+.logo_head > div {
+    float: right;
+    padding: 10px;
+}
+
+/* Main Title */
+
+.logo_head .title_logo{
+    float:left;
+    padding-right: 20px;
+    padding-top: 10px;
+    margin-right: 20px;
+}
+
+.title_logo:hover {
+    color:rgb(27, 27, 27);
+    cursor:pointer;
+}
+
+.logo_head .title_logo a{
+    font-family: 'Pacifico', cursive;
+    color:white;
+    font-size: 1.8em;
+    text-decoration: none;
+    padding-left: 10px;
+}
+
+.logo_head .title_logo a:hover{
+    color:rgb(27, 27, 27);
+}
+
+.logo_head .title_logo img {
+    height: 60px;
+    width: 60px;
+    vertical-align: -19px;
+}
+
+/* Search Bar */
+
+.logo_head .search_bar {
+    float:left;
+    padding-top: 20px;   
+}
+
+.logo_head .search_bar input{
+    /* how wide the search bar box is */
+    font-family: 'Playfair Display', serif;
+    width: 400px;
+    height:39px;
+    padding-left:15px;
+    background-color: rgba(248, 248, 248, 0.945);
+    border: 1px solid grey;
+    margin-right: 5px;
+}
+
+/* Button */
+.logo_head .search_bar button {
+    background-color: white;
+    border: 1px solid grey;
+    padding:7px 8px;
+    vertical-align: -3px;
+}
+
+.logo_head .search_bar button:hover {
+    cursor: pointer;
+}
+
+.logo_head .search_bar button img{
+    background-color: transparent;
+    height: 20px;
+    width: 20px;
+}
+
+/* Cart Button */
+
+.logo_head .cart {
+    padding: 20px 35px;
+    float: right;
+}
+
+.logo_head .cart a {
+    color:white;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.logo_head .cart a:hover {
+    color:rgb(0, 0, 0);
+    border-bottom: black 2px solid;
+}
+
+/* Sign In Button */
+.logo_head .sign_in {
+    padding: 20px;
+    float: right;
+}
+
+.logo_head .sign_in a {
+    color:white;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.logo_head .sign_in a:hover {
+    color:rgb(0, 0, 0);
+    border-bottom: black 2px solid;
+}
+
+.logo_head .sign_in:hover ul{
+    display: block;
+}
+
+.sign_in ul {
+    display:none;
+    padding: 0px;
+    margin: 0px;
+    margin-top: 15px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 5px 5px 5px rgb(144, 144, 144);
+    position: absolute;
+    list-style-type: none;
+}
+
+.sign_in ul li{
+    padding: 30px;
+    padding-top: 25px;
+    text-align: left;
+    text-decoration: none;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: .9em;
+    color:grey;
+}
+
+.sign_in ul li:hover{
+    border-bottom: black solid 2px;
+    background-color: rgb(241, 241, 241);
+    cursor: pointer;
+}
+
+
+/* Navigation Bar */
+
+.main_nav ul {
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    background-color: rgb(240, 240, 240);
+}
+
+.main_nav ul li {
+    text-align: center;
+}
+
+.main_nav ul li a{
+    font-family: 'Inter', sans-serif;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 0.9em;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    display: block;
+}
+
+.main_nav ul li a:hover{
+    color: gray;
+    border-bottom: black 2px solid;
+}
+
+/* ====== DEALS BAR ======== */
+
+.deals_nav {
+    background-color: rgba(246, 246, 246, 0.52);
+    border-top: rgba(0, 0, 0, 0.2) solid 1.5px;
+    border-bottom: rgba(0, 0, 0, 0.2) solid 1.5px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    
+}
+.deals_nav ul {
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+
+.deals_nav ul li {
+    border-right: 2px rgba(0, 0, 0, 0.253) solid ;
+    
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.deals_nav ul li:hover {
+    background-color: rgb(240, 240, 240);
+}
+
+.deals_nav ul li a{
+    padding: 10px 15px 0px 7px;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+.deals_nav ul li img {
+    vertical-align: middle;
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+}
+
+/* == SHOES NAV == */
+
+.shoes_nav {
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content:center;
+    height: 280px;
+    width: auto;
+}
+
+.shoes_nav div {
+    font-size: .95em;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.shoes_nav div:hover {
+    border-bottom: 3px solid black;
+    cursor:pointer;
+}
+
+/* === FILTERS BAR === */
+
+
+.filter_bar{
+    border-right: 2px solid rgba(0, 0, 0, 0.200);
+    border-top: 2px solid rgba(0, 0, 0, 0.200);
+    height: 100%;
+}
+
+/* === FILTER BAR HEADER === */
+
+.filter_bar header {
+    text-align: left;
+    padding-top: 5px;
+    padding-right: 10px;
+    padding-left: 23px;
+    margin-bottom: 20px;
+}
+
+.filter_bar header span {
+    font-size: 1.1em;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.filter_bar header span a{
+    padding-top: 2px;
+    font-size: .6em;
+    font-weight: normal;
+    float: right;
+    color: black;
+}
+
+/* === FILTER BAR GET TODAY SECTION === */
+
+.filter_bar .get_today{
+    padding: 10px;
+    border-top: 1px rgba(0, 0, 0, 0.253) solid ;
+    background-color: rgb(241, 241, 241);
+}
+
+.filter_bar .get_today div{
+    font-size: .9em;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-weight: bold;
+    padding-left: 10px;
+    padding-bottom: 8px;
+}
+
+.filter_bar .get_today span{
+    font-size: .85em;
+    display: inline;
+    font-family: 'Raleway', sans-serif;
+    padding: 5px;
+}
+
+.filter_bar .get_today span input {
+    width: 20px;
+    height:20px;
+    margin-bottom:10px;
+    margin-left: 10px;
+}
+
+/* === FILTER BAR GENDER SECTION === */
+
+.filter_bar .gender {
+    padding: 10px;
+    border-top: 1px rgba(0, 0, 0, 0.253) solid ;
+    background-color: rgb(255, 255, 255);
+}
+
+.filter_bar .gender header {
+    font-size: .9em;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-weight: bold;
+    padding-left: 10px;
+    padding-bottom: 8px;
+    text-align: left;
+}
+
+.filter_bar .gender .women, .men {
+    font-size: .9em;
+    font-weight: bold;
+    display: inline;
+    font-family: 'Raleway', sans-serif;
+    padding: 10px;
+    vertical-align: 3px;
+}
+
+.filter_bar .gender div span input {
+    
+    width: 20px;
+    height:20px;
+    margin-bottom:15px;
+    margin-left: 15px;
+    
+}
+
+/* === FILTER BAR - SIZE SECTION === */
+
+
+.filter_bar .shoe_size {
+    padding: 10px;
+    border-top: 1px rgba(0, 0, 0, 0.253) solid ;
+    background-color: rgb(255, 255, 255);
+}
+
+.filter_bar .shoe_size header {
+    font-size: .9em;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-weight: bold;
+    padding-left: 10px;
+    padding-bottom: 8px;
+    text-align: left;
+}
+
+.filter_bar .shoe_size div span input {
+    
+    width: 20px;
+    height:20px;
+    margin-bottom:15px;
+    margin-left: 6.5px;
+    
+}
+
+.filter_bar .shoe_size div span {
+    font-size: .9em;
+    font-weight: bold;
+    display: inline;
+    font-family: 'Raleway', sans-serif;
+    padding: 10px;
+    vertical-align: 3px;
+}
+
+/* === MAIN SECTION == */
+
+/* HEADER FOR MAIN SECTION */
+
+.content_area {
+    border-top: 2px solid rgba(0, 0, 0, 0.200);
+}
+
+.content_area .gallery_header {
+    padding-top: 20px;
+    padding-left: 50px;
+    padding-bottom: 20px;
+    text-align: left;
+}
+
+.content_area .shoe_header {
+    font-size: 1.3em;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-weight: bolder;
+    text-align: center;
+    padding-right: 15px;
+}
+
+.content_area .showing {
+    font-size: 0.95em;
+    font-family: 'Playfair Display', serif;
+}
+
+/* GALLERY SHOE AREA */
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    align-items: stretch;
+    padding-left: 30px;
+}
+
+.gallery .col_one, .col_two, .col_three {
+    width: 33%;
+}
+
+.gallery .col_one img, .col_two img, .col_three img{
+    max-width: 100%;
+}
+
+.col_one div section, .col_one div header, .col_two div section, .col_two div header, .col_three div section, .col_three div header {
+    padding-left: 15px;
+}
+
+.item_1:hover, .item_2:hover, .item_3:hover {
+    cursor: pointer;
+    border-bottom: 4px solid rgba(0, 0, 0, 0.452);
+}
+
+/* SHOE BRAND NAME */
+.col_one div header, .col_two div header, .col_three div header{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+/* SHOE TYPE NAME */
+.col_one div section, .col_two div section, .col_three div section {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: .9em;
+    padding-bottom: 15px;
+}
+
+/* == FOOTER -- */
+
+.footer_area {
+    height: 600px;
+}
+
+@media (max-width: 950px) {
+    .web_body{
+        grid-template-columns: auto;
+        grid-template-areas: 
+        'logoHead'
+        'mainNav'
+        'shoesNav'
+        'filterBar'
+        'contentArea'
+        'dealNav'
+        'footerArea';
+    }
+
+    .logo_head .title_logo{
+        padding-left: 80px;
+        font-size: 1.3em;
+    }
+
+    .logo_head .search_bar input{
+        width: 420px;
+    }
+
+    .shoes_nav div:hover {
+        background-color: rgb(243, 242, 242);
+        border: none;
+    }
+
+    .shoes_nav {
+        border-top: 2px solid rgba(0, 0, 0, 0.2);
+    }
+
+    .shoes_nav div {
+        font-size: .9em;
+        width: auto;
+    }
+
+    .shoes_nav img {
+        width: 30%;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+    .col_one, .col_two, .col_three {
+        flex: 100%;
+    }
+
+    .main_nav ul {
+        flex-direction: column;
+    }
+
+    .deals_nav ul {
+        flex-direction: column;
+    }
+
+    .deals_nav ul li {
+        border-right: none;
+    }
+
+    .sign_in, .cart{
+        font-size: larger;
+        margin-right: 55px;
+    }
+
+    .logo_head > div {
+        padding-bottom: 0px;
+    }
+
+}
